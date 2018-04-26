@@ -1,14 +1,14 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("facebook.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("TastyKhana.feature");
 formatter.feature({
   "line": 2,
-  "name": "Facebook functionality",
+  "name": "Tastykhana functionality",
   "description": "",
-  "id": "facebook-functionality",
+  "id": "tastykhana-functionality",
   "keyword": "Feature",
   "tags": [
     {
       "line": 1,
-      "name": "@facebook1"
+      "name": "@tastykhana"
     }
   ]
 });
@@ -28,61 +28,92 @@ formatter.match({
   "location": "CommonStepDefinitions.Open_browser_and_start_application()"
 });
 formatter.result({
-  "duration": 28492496637,
+  "duration": 12271227731,
   "status": "passed"
 });
 formatter.scenario({
   "line": 7,
-  "name": "Test login functionality",
+  "name": "Tastykhana login functionality",
   "description": "",
-  "id": "facebook-functionality;test-login-functionality",
+  "id": "tastykhana-functionality;tastykhana-login-functionality",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 8,
-  "name": "I enter username as \"deb_saheb8@yahoo.co.in\" and password \"debashish@123\"",
+  "name": "I enter city and area",
+  "rows": [
+    {
+      "cells": [
+        "city",
+        "Pune"
+      ],
+      "line": 9
+    },
+    {
+      "cells": [
+        "area",
+        "Anand Nagar (Kothrud)"
+      ],
+      "line": 10
+    }
+  ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 9,
-  "name": "I click on Login button",
+  "line": 12,
+  "name": "user should be see the \"Anand Nagar (Kothrud)\" food panda page",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 13,
+  "name": "I select restaurant as",
+  "rows": [
+    {
+      "cells": [
+        "Restaurant",
+        "Rolls Mania (Karishma society)"
+      ],
+      "line": 14
+    }
+  ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 10,
-  "name": "user should be see the home page",
-  "keyword": "Then "
+  "line": 15,
+  "name": "I select menu item",
+  "rows": [
+    {
+      "cells": [
+        "Menu",
+        "Aloo Chili Roll (ACR)",
+        "47.62"
+      ],
+      "line": 16
+    }
+  ],
+  "keyword": "When "
+});
+formatter.match({
+  "location": "TastyKhanaPageStepDefinition.I_enter_city_and_area(DataTable)"
+});
+formatter.result({
+  "duration": 3186991796,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "deb_saheb8@yahoo.co.in",
-      "offset": 21
-    },
-    {
-      "val": "debashish@123",
-      "offset": 59
+      "val": "Anand Nagar (Kothrud)",
+      "offset": 24
     }
   ],
-  "location": "CommonStepDefinitions.login(String,String)"
+  "location": "TastyKhanaPageStepDefinition.user_should_be_see_the_food_panda_page(String)"
 });
 formatter.result({
-  "duration": 181022243233,
+  "duration": 2977616699,
   "status": "passed"
 });
 formatter.match({
-  "location": "CommonStepDefinitions.I_click_on_login_button()"
-});
-formatter.result({
-  "duration": 1514660175,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CommonStepDefinitions.user_should_be_see_the_home_page()"
-});
-formatter.result({
-  "duration": 6553225697,
-  "status": "passed"
-});
+  "location": "TastyKhanaPageStepDefinition.I_select_restaurant_as(DataTable)"
 });

@@ -7,6 +7,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import FrameworkFunctions.FrameworkFunction;
 import PageElement.PageObjectsElement;
 import cucumber.api.Scenario;
 import cucumber.api.java.en.And;
@@ -14,24 +15,28 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class CommonStepDefinitions extends AbstractPageStepDefinition {
 
-	WebDriver driver=getDriver();
+
+public class CommonStepDefinitions extends FrameworkFunction {
+
+	
+	//WebDriver driver=getDriver();
+	
 	
 	@Given("^Open browser and start application.$")
 	public void Open_browser_and_start_application()throws Throwable
 	{
-		driver.navigate().to("http://facebook.com");	
-		log.info("Webpage opened");
+		FrameworkFunction.openApp("CH","http://tastykhana.in" );
+		//driver.navigate().to("http://facebook.com");	
+	    log.info("Webpage opened");
 	}
 	
-//	@And("^I close the browser$")
-//	public void I_close_the_browser(Scenario scenario1)
-//	{
-//		PageObjectsElement element=new PageObjectsElement(driver);
-//		element.closeBrowser(scenario1);
-//	}
-//	
+	@And("^I close the browser$")
+	public void I_close_the_browser()throws Throwable
+	{
+		FrameworkFunction.fn_closeBrowser();
+	}
+	
 	@When("^I enter username as \"([^\"]*)\" and password \"([^\"]*)\"$")
 	public void login(String username2,String password2)throws Throwable
 	{  	PageObjectsElement element=new PageObjectsElement(driver);
@@ -56,6 +61,19 @@ public class CommonStepDefinitions extends AbstractPageStepDefinition {
 		log.info("Home page is displayed");
 	}
 
-
-
+@After()
+public void tearDown(Scenario scenario)
+{
+	scenario.write("Finished Scenario");
+	if(scenario.isFailed())
+	{
+		scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES),"image/png");
+		System.out.println("Test Environment Destroyed");
+		System.out.println("--------------------------------");
+		driver.close();
+		driver.quit();
+	}
+	}
 }
+
+

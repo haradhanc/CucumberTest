@@ -3,12 +3,13 @@ package StepDefinitions;
 import java.util.logging.Logger;
 
 import org.openqa.selenium.WebDriver;
+
+import FrameworkFunctions.FrameworkFunction;
 import PageElement.PageObjectsElement;
 import cucumber.api.java.en.When;
 
-public class FacebookLogout extends AbstractPageStepDefinition {
-	static Logger log=Logger.getLogger(FacebookLogout.class.getName());
-	WebDriver driver=getDriver();	
+public class FacebookLogout extends FrameworkFunction {
+	//static Logger log=Logger.getLogger(FacebookLogout.class.getName());		
 	
 	@When("^I click on logout button$")
 	public void I_click_on_logout_button()throws Throwable
