@@ -2,9 +2,12 @@ package PageElement;
 
 import static org.junit.Assert.*;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Driver;
 import java.util.List;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.velocity.tools.generic.ResourceTool.Key;
@@ -44,7 +47,7 @@ public class TastyKhanaPageObject{
  public TastyKhanaPageObject(WebDriver driver) {
 	this.driver=driver;
  }
- 
+  
  public void login(DataTable table1) 
  {
 	 List<List<String>> data=table1.raw();

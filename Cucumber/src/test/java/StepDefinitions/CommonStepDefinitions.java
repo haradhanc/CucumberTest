@@ -1,5 +1,8 @@
 package StepDefinitions;
 
+import java.io.FileInputStream;
+import java.util.Properties;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -9,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 
 import FrameworkFunctions.FrameworkFunction;
 import PageElement.PageObjectsElement;
+import PageElement.TastyKhanaPageObject;
 import cucumber.api.Scenario;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -21,12 +25,10 @@ public class CommonStepDefinitions extends FrameworkFunction {
 
 	
 	//WebDriver driver=getDriver();
-	
-	
 	@Given("^Open browser and start application.$")
 	public void Open_browser_and_start_application()throws Throwable
 	{
-		FrameworkFunction.openApp("CH","http://tastykhana.in" );
+		FrameworkFunction.openApp("CH");
 		//driver.navigate().to("http://facebook.com");	
 	    log.info("Webpage opened");
 	}

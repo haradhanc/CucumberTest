@@ -28,7 +28,7 @@ formatter.match({
   "location": "CommonStepDefinitions.Open_browser_and_start_application()"
 });
 formatter.result({
-  "duration": 12271227731,
+  "duration": 14204422098,
   "status": "passed"
 });
 formatter.scenario({
@@ -65,55 +65,6 @@ formatter.step({
   "name": "user should be see the \"Anand Nagar (Kothrud)\" food panda page",
   "keyword": "Then "
 });
-formatter.step({
-  "line": 13,
-  "name": "I select restaurant as",
-  "rows": [
-    {
-      "cells": [
-        "Restaurant",
-        "Rolls Mania (Karishma society)"
-      ],
-      "line": 14
-    }
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 15,
-  "name": "I select menu item",
-  "rows": [
-    {
-      "cells": [
-        "Menu",
-        "Aloo Chili Roll (ACR)",
-        "47.62"
-      ],
-      "line": 16
-    }
-  ],
-  "keyword": "When "
-});
 formatter.match({
   "location": "TastyKhanaPageStepDefinition.I_enter_city_and_area(DataTable)"
-});
-formatter.result({
-  "duration": 3186991796,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Anand Nagar (Kothrud)",
-      "offset": 24
-    }
-  ],
-  "location": "TastyKhanaPageStepDefinition.user_should_be_see_the_food_panda_page(String)"
-});
-formatter.result({
-  "duration": 2977616699,
-  "status": "passed"
-});
-formatter.match({
-  "location": "TastyKhanaPageStepDefinition.I_select_restaurant_as(DataTable)"
 });

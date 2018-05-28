@@ -6,10 +6,12 @@ import java.io.File;
 
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.WebDriver;
 
 import com.cucumber.listener.Reporter;
 
 import cucumber.api.CucumberOptions;
+import cucumber.api.java.After;
 import cucumber.api.junit.Cucumber;
 
 
@@ -28,10 +30,11 @@ plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports
 //json is for json report
 
 public class RunTest {
+	
 	@AfterClass
 	public static void writeExtentReport() {
 		//Reporter.loadXMLConfig(new File(FileReaderManager.getInstance().getConfigReader().getReportConfigPath()));
-		//Reporter.loadXMLConfig(new File("/Cucumber/target/Configs/extent-config.xml"));
+		Reporter.loadXMLConfig(new File("/Cucumber/target/Configs/extent-config.xml"));
+		
 	}
-
 }

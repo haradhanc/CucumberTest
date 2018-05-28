@@ -1,5 +1,9 @@
 package FrameworkFunctions;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -23,15 +27,19 @@ public class FrameworkFunction {
 	protected static WebDriver driver;
 	protected static Logger log=Logger.getLogger(FrameworkFunction.class.getName());
 	//Application Open Function
-	public static WebDriver openApp(String BrowserName,String url)
+	public static WebDriver openApp(String BrowserName) throws IOException
 	{
 		fn_LaunchBrowser(BrowserName);
-		fn_OpenURL(url);
+		fn_OpenURL();
 		return driver;
 	}
 	//URL open function
-	public static void fn_OpenURL(String url)
+	public static void fn_OpenURL() throws IOException
 	{
+		Properties obj=new Properties();
+		FileInputStream objfile=new FileInputStream(System.getProperty("user.dir")+"\\ObjectRepository.properties");
+		obj.load(objfile);
+		String url= obj.getProperty("ApplicationUrl");
 		driver.get(url);
 		driver.manage().window().maximize();
 //		if(driver.findElement(By.partialLinkText("Home")).isDisplayed())
@@ -50,6 +58,7 @@ public class FrameworkFunction {
 		{
 			System.setProperty("webdriver.chrome.driver","E:\\Project\\Cucumber\\Drivers\\chromedriver.exe");
 			driver=new ChromeDriver();
+		
 		}
 		else if(browsername=="IE")
 		{
