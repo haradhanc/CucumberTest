@@ -1,10 +1,10 @@
-package StepDefinitions;
+/*package StepDefinitionsBDD;
 
 import java.util.logging.Logger;
 
 import org.openqa.selenium.WebDriver;
 
-import PageElement.PageObjectsElement;
+import PageObjectModel.PageObjectsElement;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 
@@ -26,3 +26,4 @@ public class FriendRequest extends AbstractPageStepDefinition {
 	}
 
 }
+*/

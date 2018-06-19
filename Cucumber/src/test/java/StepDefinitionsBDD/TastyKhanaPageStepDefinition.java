@@ -1,11 +1,11 @@
-package StepDefinitions;
+/*package StepDefinitionsBDD;
 
 import java.util.logging.Logger;
 
 import org.openqa.selenium.WebDriver;
 
 import FrameworkFunctions.FrameworkFunction;
-import PageElement.TastyKhanaPageObject;
+import PageObjectModel.TastyKhanaPageObject;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -43,3 +43,4 @@ public class TastyKhanaPageStepDefinition extends FrameworkFunction {
 	}
 
 }
+*/

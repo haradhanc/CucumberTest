@@ -20,16 +20,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import PageElement.PageObjectsElement;
+import PageObjectModel.PageObjectsElement;
 
 
 public class FrameworkFunction {
 	protected static WebDriver driver;
-	protected static Logger log=Logger.getLogger(FrameworkFunction.class.getName());
+	//protected static Logger log=Logger.getLogger(FrameworkFunction.class.getName());
 	//Application Open Function
-	public static WebDriver openApp(String BrowserName) throws IOException
+	public static WebDriver openApp(String browsername) throws IOException
 	{
-		fn_LaunchBrowser(BrowserName);
+		fn_LaunchBrowser(browsername);
 		fn_OpenURL();
 		return driver;
 	}
@@ -54,7 +54,36 @@ public class FrameworkFunction {
 	//Browser launch function
 	public static WebDriver fn_LaunchBrowser(String browsername)
 	{
-		if(browsername=="CH")
+		switch(browsername)
+		{
+		case "InternetExplorer":
+		{
+			DesiredCapabilities capability=DesiredCapabilities.internetExplorer();
+			capability.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+			capability.setCapability(InternetExplorerDriver.ENABLE_ELEMENT_CACHE_CLEANUP,true);
+			System.setProperty("webdriver.ie.driver","E:\\Project\\Cucumber\\Drivers\\IEDriverServer.exe");
+			driver=new InternetExplorerDriver();
+			break;
+		}
+		case "Chrome":
+		{
+			System.setProperty("webdriver.chrome.driver","E:\\Project\\Cucumber\\Drivers\\chromedriver.exe");
+			driver=new ChromeDriver();
+			break;
+		}
+		case "Firefox":
+		{
+			driver=new FirefoxDriver();
+			break;
+		}
+		default: 
+			System.setProperty("webdriver.chrome.driver","E:\\Project\\Cucumber\\Drivers\\chromedriver.exe");
+		    driver=new ChromeDriver();
+		}
+		return driver;
+		
+		}
+		/*if(browsername=="CH")
 		{
 			System.setProperty("webdriver.chrome.driver","E:\\Project\\Cucumber\\Drivers\\chromedriver.exe");
 			driver=new ChromeDriver();
@@ -77,7 +106,7 @@ public class FrameworkFunction {
 		}
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;
-	}
+	}*/
 	//select by visible text function
 	public static void fn_SelectByVisibleText(WebElement we,String VisibleText)
 	{

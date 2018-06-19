@@ -1,4 +1,4 @@
-@facebook1
+@facebook2
 Feature: Facebook logout functionality
 Background:
 Given Open browser and start application.

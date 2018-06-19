@@ -1,4 +1,4 @@
-package StepDefinitions;
+package StepDefinitionsBDD;
 
 import java.io.File;
 import java.io.IOException;

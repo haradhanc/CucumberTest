@@ -1,11 +1,11 @@
-package StepDefinitions;
+/*package StepDefinitionsBDD;
 
 import java.util.logging.Logger;
 
 import org.openqa.selenium.WebDriver;
 
 import FrameworkFunctions.FrameworkFunction;
-import PageElement.PageObjectsElement;
+import PageObjectModel.PageObjectsElement;
 import cucumber.api.java.en.When;
 
 public class FacebookLogout extends FrameworkFunction {
@@ -20,3 +20,4 @@ public class FacebookLogout extends FrameworkFunction {
 	}
 
 }
+*/

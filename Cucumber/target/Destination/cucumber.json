@@ -1,0 +1,101 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 13,
+        "name": "Test login functionality",
+        "description": "",
+        "id": "facebook-functionality;test-login-functionality;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 17591543190,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Open Chrome and start application.",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Chrome",
+                  "offset": 5
+                }
+              ],
+              "location": "CommonStepDefinitions.Open_browser_and_start_application(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "I enter deb_saheb8@yahoo.co.in and debashish@123",
+            "match": {},
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "I click on Login button",
+            "match": {
+              "location": "CommonStepDefinitions.I_click_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "user should be see the home page",
+            "match": {
+              "location": "CommonStepDefinitions.user_should_be_see_the_home_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "I close the browser",
+            "match": {
+              "location": "CommonStepDefinitions.I_close_the_browser()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@facebook52"
+          }
+        ]
+      }
+    ],
+    "name": "Facebook functionality",
+    "description": "",
+    "id": "facebook-functionality",
+    "keyword": "Feature",
+    "uri": "facebook.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@facebook52"
+      }
+    ]
+  }
+]

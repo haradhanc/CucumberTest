@@ -1,11 +1,11 @@
-package StepDefinitions;
+/*package StepDefinitionsBDD;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Logger;
 import org.openqa.selenium.WebDriver;
 
-import PageElement.PageObjectsElement;
+import PageObjectModel.PageObjectsElement;
 import cucumber.api.java.en.When;
 
 public class ExcelReadStepDefinition extends AbstractPageStepDefinition {
@@ -20,4 +20,4 @@ public class ExcelReadStepDefinition extends AbstractPageStepDefinition {
 	
 	
 	
-}
+}*/

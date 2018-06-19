@@ -1,10 +1,10 @@
-package StepDefinitions;
+/*package StepDefinitionsBDD;
 
 import java.util.logging.Logger;
 
 import org.openqa.selenium.WebDriver;
 
-import PageElement.PageObjectsElement;
+import PageObjectModel.PageObjectsElement;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.When;
 
@@ -21,3 +21,4 @@ public class CreateNewAccount extends AbstractPageStepDefinition{
 		log.info("Account creation data have been entered");
 	}
 }
+*/

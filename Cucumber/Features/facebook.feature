@@ -1,15 +1,16 @@
-@facebook1
+@facebook52
 Feature: Facebook functionality
 
-Background:
-Given Open browser and start application.
-
-  Scenario: Test login functionality
-  When I enter username as "deb_saheb8@yahoo.co.in" and password "debashish@123"
+  Scenario Outline: Test login functionality
+  Given Open <Browser> and start application.
+  When I enter <username> and <password>
   And I click on Login button
   Then user should be see the home page
   And I close the browser
   
+ Examples:
+ |Browser|username|password|
+ |Chrome|deb_saheb8@yahoo.co.in|debashish@123|
   
   
   
